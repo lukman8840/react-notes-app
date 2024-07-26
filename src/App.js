@@ -4,6 +4,7 @@ import NodeList from './Components/NodeList';
 import { nanoid } from 'nanoid'
 import Search from './Components/Search';
 import Header from './Components/Header';
+import Navbar from './Components/Navbar';
 
 function App() {
   const [notes, setNotes] = useState([
@@ -76,6 +77,7 @@ function App() {
   return (
     <div className={`${darkMode && 'dark-mode'}`}>
       <div className="Container">
+        <Navbar />
         <Header handleToggleMode={setDarkMode} />
         <Search handleSearchNote={handleSearchNote} />
         <NodeList
